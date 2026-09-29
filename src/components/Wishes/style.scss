@@ -1,0 +1,35 @@
+.wishes {
+    &__title {
+        font-family: 'Artemis cursive', sans-serif;
+        font-style: normal;
+        font-size: 40px;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        font-family: "Lora", sans-serif;
+        font-style: normal;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+        color: #333333cc;
+
+    }
+
+    &__description {
+        font-family: "Lora", sans-serif;
+        font-style: normal;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        color: #333333cc;
+    }
+}

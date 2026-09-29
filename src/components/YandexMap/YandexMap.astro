@@ -1,0 +1,28 @@
+---
+import './style.scss';
+
+interface Props {
+  title?: string;
+  body?: string;
+  href?: string;
+}
+type PropsTimer = Partial<Props>;
+
+const { href, title, body } = Astro.props;
+---
+
+<section class="map">
+  <div class="map__description">
+    <h2 class="map__title">Место проведения</h2>
+    <p class="map__subtitle">
+      Для вашего удобства мы <br /> подготовили карту. Надеемся, <br /> что вы легко
+      найдете место <br /> проведения свадьбы и порадуете <br /> нас своим присутствием!
+    </p>
+  </div>
+  <address id="map" class="map__container-yandex"></address>
+  <button id="openRouteButton" class="button">Построить маршрут</button>
+</section>
+<script
+  src="https://api-maps.yandex.ru/2.1/?apikey=d1733c10-fbfc-4cd6-a3a7-d99bd59728ab&lang=ru_RU" type="text/javascript"></script>
+<script src="./map.ts"></script>
+<script src="./animate.ts"></script>

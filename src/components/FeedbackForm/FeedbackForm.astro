@@ -1,0 +1,81 @@
+---
+// Import the sendMail function from your TypeScript file
+// import sendMail from './sendMail';
+import './style.scss';
+---
+
+<form id="feedback-form" action="https://formspree.io/f/xwkggzzq" method="POST">
+  <h2 class="form-h2">Анкета гостя</h2>
+  <div class="form-group">
+    <input
+      required="required"
+      class="form-control"
+      type="text"
+      name="Имя и Фамилия"
+    />
+    <label class="form-label">Ваше Имя и Фамилия</label>
+  </div>
+  <label class="lll">
+    Пожалуйста, подтвердите своё присутствие до 22.11.2026:
+    <select class="form-select" name="Присутствие" required>
+      <option value="Обязательно буду">Обязательно буду</option>
+      <option value="Не смогу пойти">Не смогу пойти</option>
+    </select>
+  </label>
+  <div class="form-group">
+    <input
+      required="required"
+      class="form-control"
+      type="text"
+      name="Компаньены"
+    />
+    <label class="form-label">С кем вы пойдете на праздник?</label>
+  </div>
+  <div class="form-group">
+    <input required="required" class="form-control" type="text" name="Дети" />
+    <label class="form-label"> Будут ли с вами дети?</label>
+  </div>
+  <!-- <label>
+    Уточните есть ли у вас аллергия на какие-то продукты или особенности
+    питания:
+  </label> -->
+  <div class="form-group">
+    <textarea
+      required="required"
+      class="form-control textarea"
+      name="Диетические особенности"
+      rows="4"></textarea>
+    <label class="form-label">Особенности питания</label>
+  </div>
+
+  <button type="submit" class="form-button">Отправить</button>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form: any = document.getElementById('feedback-form');
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Ваша анкета успешно отправлена!');
+        form.reset();
+      } else {
+        alert('Failed to send email.');
+      }
+    });
+  });
+</script>

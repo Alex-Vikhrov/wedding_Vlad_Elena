@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Invitation from '@components/Invitation/Invitation.astro';
+import Header from '@components/Header/Header.astro';
+import Wishes from '@components/Wishes/Wishes.astro';
+import Carousel from '@components/Carousel/Carousel.astro';
+import YandexMap from '@components/YandexMap/YandexMap.astro';
+import Dresscode from '@components/Dresscode/Dresscode.astro';
+import Information from '@components/Informattion/Information.astro';
+import TimingDay from '@components/TimingDay/TimingDay.astro';
+import FeedbackForm from '@components/FeedbackForm/FeedbackForm.astro';
+import Calendar from '@components/Calendar/Calendar.astro';
+---
+
+<Layout title="Wedding-Vlad-Elena">
+  <Header />
+  <main>
+    <section class="wrapper">
+      <Invitation />
+      <Calendar />
+      <TimingDay />
+      <YandexMap />
+      <Dresscode />
+      <Carousel />
+      <Information />
+      <Wishes />
+      <FeedbackForm />
+    </section>
+  </main>
+
+  <style lang="scss">
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      background-color: #ffffff;
+      max-width: 700px;
+      & > div {
+        padding: 0px 10px;
+      }
+    }
+  </style>
+</Layout>

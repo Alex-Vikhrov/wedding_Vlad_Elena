@@ -1,0 +1,77 @@
+---
+import './style.scss';
+import { Image } from 'astro:assets';
+import icon_1 from '../../../public/guestes.svg';
+import icon_2 from '../../../public/ceremony.svg';
+import icon_3 from '../../../public/eat.svg';
+import icon_4 from '../../../public/cake2.svg';
+import icon_5 from '../../../public/end.svg';
+---
+
+<section class="timing-day">
+  <div class="timing-day__container">
+    <h2 class="timing-day__title">План мероприятия</h2>
+
+    <div class="vertical-line">
+      <div class="segment">
+        <div class="icon">
+          <Image src={icon_1} alt="icon_1" loading="eager" class="icon__img" />
+          <!-- <img src="public/12.svg" class="icon__img" /> -->
+        </div>
+        <div class="dot"></div>
+        <div class="text">
+          <p class="text__time">16:00</p>
+          <h3 class="text__subtitle">Сбор гостей</h3>
+        </div>
+      </div>
+      <div class="segment">
+        <div class="icon">
+          <!-- <img src="public/icons/3.svg" class="icon__img" /> -->
+          <Image src={icon_2} alt="icon_2" loading="eager" class="icon__img" />
+        </div>
+        <div class="dot"></div>
+        <div class="text">
+          <p class="text__time">16:30</p>
+          <h3 class="text__subtitle">Торжественная церемония</h3>
+        </div>
+      </div>
+      <div class="segment">
+        <div class="icon">
+          <!-- <img src="public/icons/4.svg" class="icon__img" /> -->
+          <Image src={icon_3} alt="icon_3" loading="eager" class="icon__img" />
+        </div>
+        <div class="dot"></div>
+        <div class="text">
+          <p class="text__time">17:00</p>
+          <h3 class="text__subtitle">Начало банкета</h3>
+        </div>
+      </div>
+      <div class="segment">
+        <div class="icon">
+          <!-- <img src="public/icons/5.svg" class="icon__img" /> -->
+          <Image src={icon_4} alt="icon_4" loading="eager" class="icon__img" />
+        </div>
+        <div class="dot"></div>
+        <div class="text">
+          <p class="text__time">21:30</p>
+          <h3 class="text__subtitle">СВАДЕБНЫЙ ТОРТ</h3>
+        </div>
+      </div>
+      <div class="segment">
+        <div class="icon">
+          <!-- <img src="public/icons/7.svg" class="icon__img" /> -->
+          <Image src={icon_5} alt="icon_5" loading="eager" class="icon__img" />
+        </div>
+        <div class="dot"></div>
+        <div class="text">
+          <p class="text__time">23:00</p>
+          <h3 class="text__subtitle">ОКОНЧАНИЕ ВЕЧЕРА</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
+<script src="./animate.ts"></script>

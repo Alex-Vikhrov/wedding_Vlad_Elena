@@ -1,0 +1,162 @@
+---
+import { Image } from 'astro:assets';
+import './style.scss';
+import Midiy_1 from '../../../public/dress.jpg';
+import Midiy_2 from '../../../public/dress_women2.jpg';
+import Midiy_3 from '../../../public/dress_man2.jpg';
+import Modal_Midiy_2 from '../../../public/dress_women.jpg';
+import Modal_Midiy_3 from '../../../public/dress_man.jpg';
+---
+
+<!-- <img
+        src="/public/dress.jpg"
+        alt="midiy_1"
+        class="d-block w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#imageModal1"
+      /> --><!-- <Image src={Midiy_1} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_2} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_3} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- data-bs-ride="carousel" -->
+<div
+  id="carouselExampleFade"
+  class="carousel slide carousel-fade"
+  data-bs-interval="3000"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <Image
+        src={Midiy_1}
+        alt="midiy_1"
+        loading="eager"
+        class="d-block w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#imageModal1"
+      />
+    </div>
+    <div class="carousel-item">
+      <Image
+        src={Midiy_2}
+        alt="midiy_1"
+        loading="eager"
+        class="d-block w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#imageModal2"
+      />
+    </div>
+    <div class="carousel-item">
+      <Image
+        src={Midiy_3}
+        alt="midiy_1"
+        loading="eager"
+        class="d-block w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#imageModal3"
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Модальные окна для полноэкранного отображения -->
+<div
+  class="modal fade"
+  id="imageModal1"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <Image src={Midiy_1} alt="midiy_2" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="imageModal2"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <Image src={Modal_Midiy_2} alt="midiy_2" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="imageModal3"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <Image src={Modal_Midiy_3} alt="midiy_3" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>

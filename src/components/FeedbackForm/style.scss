@@ -1,0 +1,109 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0px;
+    width: 100%;
+    font-family: "Lora", sans-serif;
+    // gap: 10px;
+}
+
+.form-h2 {
+    font-family: 'Artemis cursive', sans-serif;
+    color: #333;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lll {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    letter-spacing: 1px;
+}
+
+.form-label {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 3px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    position: relative;
+    font-size: 15px;
+    color: #666;
+    width: 300px;
+
+    &+& {
+        margin-top: 30px;
+    }
+
+    .form-control {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        height: 35px;
+        background: none;
+        border: none;
+        padding: 5px 0;
+        transition: 0.3s;
+        border-radius: 0px;
+        border-bottom: 1px solid #777;
+        color: #555;
+
+        &:invalid {
+            outline: none;
+        }
+
+        &:focus,
+        &:valid {
+            outline: none;
+            box-shadow: 0 1px #af7d33;
+            border-color: #af7d33;
+
+            +.form-label {
+                font-size: 12px;
+                color: #af7d33;
+                transform: translateY(-15px);
+            }
+        }
+
+        &:-webkit-autofill {
+            background-color: transparent !important;
+        }
+    }
+
+    .textarea {
+        height: 110px;
+    }
+}
+
+.form-button {
+    font-family: "Lora", sans-serif;
+    text-transform: uppercase;
+    margin-top: 30px;
+    width: 300px;
+    border: 1px solid #af7d33;
+    background-color: #af7d33;
+    padding: 8px 0px;
+    color: #fff;
+    letter-spacing: 2.5px;
+}
+
+.form-select {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: 0.3s !important;
+    border: 1px solid #bdbdbd;
+    border-radius: 1px;
+
+    &:focus {
+        border-color: #af7d33;
+        box-shadow: none;
+    }
+}
